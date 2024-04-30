@@ -1,8 +1,5 @@
 import { initBuffers } from "./init-buffers.js";
 import { drawScene } from "./draw-scene.js";
-
-main();
-
 const vsSource = `
     attribute vec4 aVertexPosition;
     uniform mat4 uModelViewMatrix;
@@ -14,6 +11,7 @@ const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }`;
+main();
 function main() {
     const canvas = document.querySelector("#glcanvas");
   // Initialize the GL context
